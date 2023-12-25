@@ -23,3 +23,27 @@
 
 const domRoot = document.getElementById('root');
 const root = ReactDOM.createRoot(domRoot);
+
+// สร้าง Component
+// function Profile(attributeObject) {
+//   console.log('AttributeObject', attributeObject);
+//   return (
+//     <>
+//       <h1>Name : {attributeObject.name}</h1>
+//       <h2>Age : {attributeObject.age}</h2>
+//     </>
+//   );
+// }
+
+// function Profile(props) {
+//   console.log('AttributeObject', props);
+//   return (
+//     <>
+//       <h1>Name : {props.name}</h1>
+//       <h2>Age : {props.age}</h2>
+//     </>
+//   );
+// }
+
+// Render Component
+// root.render(<Profile name='John' age={20} />);

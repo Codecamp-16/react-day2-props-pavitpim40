@@ -23,3 +23,25 @@
 
 const domRoot = document.getElementById('root');
 const root = ReactDOM.createRoot(domRoot);
+
+// สร้าง Component
+
+function ProductItem(props) {
+  console.log(props);
+  return (
+    <>
+      <h3>Product Name : {props.product.name}</h3>
+      <h4>Product Price : {props.product.price}</h4>
+      <h4>Description: {props.product.description}</h4>
+    </>
+  );
+}
+// วิธี Collect Data => Object (เก็บได้หลายค่า)
+const item = {
+  name: 'iMac',
+  price: 50_000,
+  description: 'new Version',
+};
+
+// Render
+root.render(<ProductItem product={item} />);
