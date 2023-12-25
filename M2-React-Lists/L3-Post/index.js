@@ -56,7 +56,6 @@ const root = ReactDOM.createRoot(domRoot);
 //   </>
 // );
 
-
 // ############# EX3 - item : Object (Map to Function Component)
 
 // // Data
@@ -67,13 +66,13 @@ const posts = [
 
 // Function Component with Props
 function Card(props) {
-	return (
-		<div className='card'>
-        <h1>{props.a}</h1>
-        <h1>{props.b}</h1>
-        <h1>{props.c}</h1>
-      </div>
-	)
+  return (
+    <div className='card'>
+      <h1>{props.a}</h1>
+      <h1>{props.b}</h1>
+      <h1>{props.c}</h1>
+    </div>
+  );
 }
 
 // item = { id: 1, message: 'Hi Everyone', date: '2023-10-09', author: 'IO' }
@@ -82,11 +81,8 @@ function Card(props) {
 // 2nd Checkpoint : Component ที่ return จ่าก map รับอะไรเป็น Props
 root.render(
   <>
-    {posts.map((item,index) => <Card 
-			key={index}
-			a={item.message} 
-			b={item.date} 
-			c={item.author}
-			/>)}
+    {posts.map((item, index) => (
+      <Card key={index} a={item.message} b={item.date} c={item.author} />
+    ))}
   </>
 );
