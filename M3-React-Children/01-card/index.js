@@ -32,10 +32,17 @@ function Parent(props) {
 }
 
 root.render(
-  <Parent title='Headline label' subtitle='text label'>
-    <form className='form'>
-      <input className='form__input' />
-      <button className='form__button'>Button</button>
-    </form>
-  </Parent>
+  <>
+    <Parent title='Headline label' subtitle='text label'>
+      <form className='form'>
+        <input className='form__input' />
+        <button className='form__button'>Button</button>
+      </form>
+    </Parent>
+    <Parent title='Headline label' subtitle='text label'>
+      <button>Save</button>
+      <button>Cancel</button>
+      <p>asdsadsdadasd</p>
+    </Parent>
+  </>
 );
