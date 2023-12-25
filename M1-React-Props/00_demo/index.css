@@ -82,12 +82,12 @@ ul li {
 a {
   text-decoration: none;
 }
-button {
+/* button {
   background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
-}
+} */
 /* ==== CONTAINER ==== */
 .container {
   width: 100%;
@@ -435,4 +435,12 @@ footer {
 
 .flex-1 {
   flex: 1;
+}
+
+.text-red {
+  color: red;
+}
+
+.text-blue {
+  color: blue;
 }
