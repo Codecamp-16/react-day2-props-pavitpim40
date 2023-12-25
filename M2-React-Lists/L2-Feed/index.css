@@ -27,3 +27,21 @@ h1 {
   background-color: wheat;
   height: 100vh;
 }
+
+.card {
+  border: 1px solid black;
+  width: 90%;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card__footer > p {
+  font-size: 24px;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+}
