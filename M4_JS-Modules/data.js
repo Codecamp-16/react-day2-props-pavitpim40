@@ -5,8 +5,10 @@ const arr = [1, 2, 3, 4, 5];
 export default [1, 2, 3, 4];
 
 // ##### named export (export ได้หลายค่า)
-export const magicNumber = 42;
-export const magicName = 'John';
-export const square = function (x) {
+const magicNumber = 42;
+const magicName = 'John';
+const square = function (x) {
   return x ** 2;
 };
+
+export { magicNumber, magicName, square };
