@@ -81,6 +81,7 @@ const todos = ['Hw', 'Football', 'PlayGame'];
 // const todoLists = todos.map((todo) => <li>{todo}</li>);
 
 function TodoItem(props) {
+  console.log(props);
   return <li>{props.text}</li>;
 }
 
@@ -92,7 +93,7 @@ function TodoItem(props) {
 //   </>
 // );
 
-const todoLists = todos.map((todo) => <TodoItem text={todo} />);
+// const todoLists = todos.map((todo, index) => <TodoItem key={index} text={todo} />);
 /*
 [
   <TodoItem text="Hw"/>,
@@ -101,11 +102,13 @@ const todoLists = todos.map((todo) => <TodoItem text={todo} />);
 ]
 */
 
-root.render(todoLists);
+// root.render(todoLists);
 
 /**********************************************
  * Ex-3 : More Example : Quote App
  **********************************************/
+
+// Data
 const quotes = [
   {
     quote: 'The only sin is ignorance',
@@ -142,6 +145,34 @@ const quotes = [
   },
 ];
 
+// สร้าง Component สำหรับ 1 Quote
+function QuoteCard(props) {
+  console.log(props);
+  return (
+    <div className='card'>
+      <h2>{props.title}</h2>
+      <h4>author : {props.author}</h4>
+    </div>
+  );
+}
+// root.render(
+//   <>
+//   <QuoteCard
+//     title='The only sin is ignorance'
+//     author="Christopher Marlowe"
+//   />
+//   <QuoteCard
+//     title='A man is his own easiest dupe, for what he wishes to be true he generally believes to be true'
+//     author="Demosthenes"
+//   />
+//   </>
+//   );
+
+// quotes = Array<  {quote: string, source: string,}>
+// const ArrayOfQuotesComponent = quotes.map((q, i) => {
+//   return <QuoteCard title={q.quote} author={q.source} />;
+// });
+// root.render(<div>{ArrayOfQuotesComponent}</div>);
 /**********************************************
  * Ex-4 : More Example : Avatar Group
  **********************************************/
@@ -171,6 +202,22 @@ const peopleLists = [
     src: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80',
   },
 ];
+
+function Avatar(props) {
+  return (
+    <>
+      <div className='avatar'>
+        <div className='c'>
+          <img src={props.src} />
+        </div>
+      </div>
+    </>
+  );
+}
+
+const AvatarGroup = peopleLists.map((person) => <Avatar src={person.src} />);
+
+root.render(<div className='row'>{AvatarGroup}</div>);
 
 /******************************************************************
  * 🚀 CodeCamp Thailand - Relearn Solution Co. 🌐
