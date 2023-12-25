@@ -27,3 +27,43 @@
 
 const domRoot = document.getElementById('root');
 const root = ReactDOM.createRoot(domRoot);
+
+// สร้าง Component #1
+// function ProductItem(props) {
+// 	console.log(props)
+//   return (
+//     <>
+//       <h3>Product Name : {props.name}</h3>
+//       <h4>Product Price : {props.price}</h4>
+//       <p>Description : {props.detail}</p>
+//     </>
+//   );
+// }
+
+// #2
+// function ProductItem(props) {
+// 	// Object Destructure
+// 	const {name,price,detail} = props
+//   return (
+//     <>
+//       <h3>Product Name : {name}</h3>
+//       <h4>Product Price : {price}</h4>
+//       <p>Description : {detail}</p>
+//     </>
+//   );
+// }
+
+// #3
+// Object Destructure at Function Parameter
+function ProductItem({ name, price, detail }) {
+  return (
+    <>
+      <h3>Product Name : {name}</h3>
+      <h4>Product Price : {price}</h4>
+      <p>Description : {detail}</p>
+    </>
+  );
+}
+
+// Render Component
+root.render(<ProductItem name='Ipad' price={30_000} detail='New version' />);

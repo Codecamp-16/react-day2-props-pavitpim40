@@ -31,9 +31,59 @@ ul li {
 a {
   text-decoration: none;
 }
-button {
+/* button {
   background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
+} */
+
+.card-container {
+  max-width: 400px;
+}
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.card-header {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+  margin-bottom: 16px;
+}
+
+.card-footer {
+  font-size: 0.9em;
+  color: #666;
+  text-align: left;
+  border-top: 1px solid #ddd;
+}
+
+.form {
+  width: 100%;
+  padding: 10px;
+  position: relative;
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+}
+.form__button {
+  background: purple;
+  padding: 10px;
+  position: absolute;
+  right: 15px;
+  top: 14px;
 }

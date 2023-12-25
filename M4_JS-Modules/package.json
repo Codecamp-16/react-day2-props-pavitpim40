@@ -1,13 +1,13 @@
 {
-  "name": "modules",
+  "name": "react-app",
+  "version": "1.1.1",
+  "description": "my first react-app",
   "type": "module",
-  "version": "1.0.0",
-  "description": "",
-  "main": "say.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "main": "index.js",
+  "keywords": [
+    "react",
+    "bootcamp"
+  ],
+  "author": "pavit pimchanagul",
+  "license": "MIT"
 }

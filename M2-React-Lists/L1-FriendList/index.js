@@ -19,3 +19,41 @@
 
 const domRoot = document.getElementById('root');
 const root = ReactDOM.createRoot(domRoot);
+
+const friends = ['John', 'Taylor', 'Jim'];
+
+// root.render(friend);
+/*
+<div id="root">
+	"John" "Taylor"
+</div>
+*/
+
+// input :  ['John', 'Taylor']
+// output : [<h3>John</h3>,  <h3>Taylor</h3>]
+// map : name => <h3>name<h3>
+
+const result = friends.map(function (person) {
+  return <h3>{person}</h3>;
+});
+
+// root.render(
+//   <>
+//     <h3>John</h3>
+//     <h3>Taylor</h3>
+//     {[<h3>John</h3>, <h3>Taylor</h3>]}
+//     {result}
+//   </>
+// );
+
+root.render(
+  <>
+    {friends.map(function (person) {
+      return <h3>{person}</h3>;
+    })}
+  </>
+);
+
+// <h3>John</h3>
+//  <h3>Taylor</h3>;
+// <h3>Jim</h3>;
