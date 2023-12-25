@@ -21,9 +21,87 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
  * Ex-1 : Render Array of React Element
  **********************************************/
 
+// root.render(
+//   <ul>
+//     <li>1</li>
+//     <li>2</li>
+//     <li>3</li>
+//   </ul>
+// );
+
+const lists = [1, 2, 3];
+// const listsComponent = [<li>1</li>, <li>2</li>, <li>3</li>];
+const listsComponent = lists.map((item, index) => <li>{item}.</li>);
+
+// root.render(<ul>{listsComponent}</ul>);
+
+// Try
+const users = ['John', 'Katy', 'Taylor', 'Ned'];
+// userComponent ของ H1 และเอาไปแสดงผล
+
+/*
+Data => Element(UI)
+"John" => <h1>John</h1>
+"Katy" => <h1>Katy</h1>
+"Taylor" => <h1>Taylor</h1>
+*/
+// const usersComponent = users.map(function (person, index) {
+//   console.log(person);
+//   return (
+//     <h1 key={index}>
+//       {index + 1}. {person}
+//     </h1>
+//   );
+// });
+
+// const usersComponent = users.map((p, i) => (
+//   <h1 key={i}>
+//     {i + 1}. {p}
+//   </h1>
+// ));
+
+// root.render(usersComponent);
+
+// root.render(
+//   <>
+//     {users.map((p, i) => (
+//       <h1 key={i}>
+//         {i + 1}. {p}
+//       </h1>
+//     ))}
+//   </>
+// );
 /**********************************************
  * Ex-2 : Render Array of React Component (Function Component)
  **********************************************/
+
+const todos = ['Hw', 'Football', 'PlayGame'];
+// const todoLists = [<li>HW</li>, <li>Football</li>, <li>PlayGame</li>];
+
+// const todoLists = todos.map((todo) => <li>{todo}</li>);
+
+function TodoItem(props) {
+  return <li>{props.text}</li>;
+}
+
+// root.render(
+//   <>
+//     <TodoItem text='HW' />
+//     <TodoItem text='Football' />
+//     <TodoItem text='Play Game' />
+//   </>
+// );
+
+const todoLists = todos.map((todo) => <TodoItem text={todo} />);
+/*
+[
+  <TodoItem text="Hw"/>,
+  <TodoItem text="Football" />,
+  <TodoItem text="PlayGame"/>,
+]
+*/
+
+root.render(todoLists);
 
 /**********************************************
  * Ex-3 : More Example : Quote App
